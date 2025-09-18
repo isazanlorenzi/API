@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -22,11 +22,11 @@
     <div class="form-container">
         <h2>Login</h2>
 
-        {% if error %}
-            <div class="error">{{ error }}</div>
-        {% endif %}
+        <!-- Mostra mensagem de erro se existir -->
+        <div th:if="${error}" class="error" th:text="${error}"></div>
 
-        <form method="POST" action="{{ url_for('login') }}">
+        <!-- Formulário de login -->
+        <form method="POST" th:action="@{/login}">
             <label for="username">Usuário:</label><br>
             <input type="text" id="username" name="username" required><br><br>
 
