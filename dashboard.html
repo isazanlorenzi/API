@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
@@ -30,9 +30,9 @@
 </head>
 <body>
     <div class="container">
-        <h2>Bem-vindo, {{ user }}!</h2>
+        <h2 th:text="'Bem-vindo, ' + ${user} + '!'"></h2>
         <p>Você está logado no sistema.</p>
-        <a href="{{ url_for('logout') }}">Sair</a>
+        <a th:href="@{/logout}">Sair</a>
     </div>
 </body>
 </html>
