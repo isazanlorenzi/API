@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.app.MainController"
+      alignment="CENTER" spacing="15" padding="20">
+
+    <!-- Título -->
+    <Label text="🚀 Template JavaFX" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Campo de texto -->
+    <TextField fx:id="inputField" promptText="Digite algo..." prefWidth="300"/>
+
+    <!-- Botão que chama o método onClick do Controller -->
+    <Button text="Enviar" onAction="#onClick"/>
+
+    <!-- Label onde aparece a resposta -->
+    <Label fx:id="outputLabel" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+
+</VBox>

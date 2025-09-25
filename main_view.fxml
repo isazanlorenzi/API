@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.app.MainController"
+      alignment="CENTER" spacing="15" padding="20">
+
+    <Label text="Exemplo: Template JavaFX" style="-fx-font-size: 18px;" />
+
+    <TextField fx:id="inputField" promptText="Digite algo..." prefWidth="300"/>
+
+    <Button text="Enviar" onAction="#onClick"/>
+
+    <Label fx:id="outputLabel" style="-fx-font-weight: bold;" />
+
+</VBox>
