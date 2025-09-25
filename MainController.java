@@ -1,10 +1,10 @@
-package com.example.app;
+package com.example;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class MainController {
+public class MainController<TextField, outputLabel, Label> {
 
     @FXML
     private TextField inputField;
@@ -12,10 +12,11 @@ public class MainController {
     @FXML
     private Label outputLabel;
 
+    @SuppressWarnings("hiding")
     @FXML
-    private void onClick() {
-        String text = inputField.getText();
-        outputLabel.setText("Você digitou: " + text);
+    private <outputLabel> void onClick() {
+        String text = ((Object) inputField).getText();
+        ((Object) outputLabel).setText("Você digitou: " + text);
 
         // 🔗 Aqui você pode chamar sua lógica de API, ex:
         // ApiService service = new ApiService();
